@@ -1,0 +1,81 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+.header .hr
+{
+  border: none; /* Supprime la bordure par défaut */
+  background-color: #000; /* Couleur de fond de la ligne */
+  opacity: 0.5; /* Opacité de la ligne (entre 0 et 1) */
+  margin: 10px 0; /* Marge supérieure et inférieure */
+display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.forme{
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+.forme p{
+    font-size: 28px;
+    font-weight: normal;
+    padding-bottom: 5px;
+line-height: 22px;
+
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 40%;
+  }
+
+  td {
+    border: 1px dotted black;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: normal;
+  }
+
+input{
+    border: none;
+  border-bottom: 1px dotted #000;
+  padding-bottom: 5px; /* Espacement en bas pour dégager l'effet pointillé */
+}
+
+.trait{
+    border: none;
+    border-bottom: 1px dotted #000;
+    padding-bottom: 5px; /* Espacement en bas pour dégager l'effet pointillé */
+    width: 15%; /* Largeur de la barre */
+  }
+
+
+.totalHt{
+    margin-left: 23%;
+    line-height: 40px;
+}
+
+.remise{
+    border: none;
+    border-bottom: 1px dotted #000;
+    padding-bottom: 5px; /* Espacement en bas pour dégager l'effet pointillé */
+    width: 70%; /* Largeur de la barre */
+}
+
+
+.tva{
+    border: none;
+    border-bottom: 1px dotted #000;
+    width: 180px; /* Largeur de la barre */
+}
