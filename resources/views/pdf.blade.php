@@ -125,6 +125,10 @@
         display: flex;
         align-items: center;
         line-height: 50px;
+
+    }
+
+    .lr{
         margin-right: 100px;
         margin-left: 100px;
     }
@@ -259,7 +263,7 @@
 
 
   <div class="container" style="display: flex;">
-    <div class="inline-containers" >
+    <div class="inline-containers lr" >
         <span class="text" >Remise : </span>  <div class="line" style="margin-left: 100px;"  >
             <span class="number" style="margin-left: 180px;">0</span> </div>
 
@@ -283,7 +287,7 @@
 
 <div class="container" style="display: flex;">
     <div class="inline-containers" >
-        <span class="text" >Espece : </span>
+        <span class="text"  >Espece : </span>
             <span class="number" style="margin-left: 180px;">1 000</span>
 
     </div>
