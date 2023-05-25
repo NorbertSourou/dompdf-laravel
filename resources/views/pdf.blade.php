@@ -34,6 +34,10 @@
 
             }
 
+            .header-texte{
+                font-size: 18px;
+            }
+
             .forme{
             display: flex;
             align-items: center;
@@ -52,10 +56,10 @@
 
             table {
                 border-collapse: collapse;
-                width: 40%;
+                width: 85%;
               }
 
-              td {
+              .tr td {
                 border: 1px dotted black;
                 padding: 10px;
                 font-size: 25px;
@@ -72,7 +76,7 @@
                 border: none;
                 border-bottom: 1px dotted #000;
                 padding-bottom: 5px; /* Espacement en bas pour dégager l'effet pointillé */
-                width: 15%; /* Largeur de la barre */
+                width: 250px; /* Largeur de la barre */
               }
 
 
@@ -95,24 +99,71 @@
                 width: 180px; /* Largeur de la barre */
             }
 
+            .hr{
+                border: none;
+                border-bottom: 2px solid #000;
+                width: 88%; /* Largeur de la barre */
+            }
+
+        .char{
+            font-size: 32px;
+        }
+
+        .inline-container {
+        display: flex;
+        align-items: center;
+        margin-left: 600px;
+
+    }
+
+    .l{
+
+        line-height: 50px;
+    }
+
+    .inline-containers {
+        display: flex;
+        align-items: center;
+        line-height: 50px;
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+
+    .line {
+
+        border-bottom: 1px dotted black;
+   width: 200px;
+   line-height: 1px;
+    }
+    .number {
+         font-weight: bold;
+    white-space: nowrap;
+    }
+
+    .inline{
+        display: flex;
+        align-items: center;
+        margin-left: 450px;
+    }
+
                     </style>
 <body>
 
     <header class="header forme">
         <div class="logo">
-            {{-- <img src="{{asset('images/alarm.svg')}}" alt="" height="100px" class="me-5"> --}}
+           {{-- <img src="{{asset('images/alarm.svg')}}" alt="" height="100px" > --}}
         </div>
               <div class="texte">
-                <h1>
+                <h1 style="line-height: 0px;">
                     Martin pecheur Sarl
                    </h1>
-                   <div>
+                   <div class="header-texte" >
                     <u>Capital Social</u> <b>1.000.000 FCFA </b>  IMPORT EXPORT COMMERCE GENERAL
                    </div>
-                   <div class="ms-3">
+                   <div style="margin-left: 10px;" class="header-texte">
                     <b><u>Compte Bancaire </u></b> : BIBE 91/7031880301/93 SGB 03153282010182
                    </div>
-                   <div class="ms-5">
+                   <div style="margin-left: 20px;" class="header-texte">
                    <b> RC</b>: RB Porto-Novo- 2007-B-467 <span class="ms-3"><b>IFU</b>:3201000073919</span>
                    </div>
               </div>
@@ -120,51 +171,47 @@
         </header>
 
 
-        <hr class="hr">
+        <div class="hr"></div>
 
-        <div class="forme">
+        <div class="forme char"  >
 
-          <div><p>Ticket N° 24 474</p></div>
-         <div class="ms-5"><p >Le 12/12/2022 à </p> </div>
-         <div class="ms-5"><p>14:54:00</p></div>
+          <span >Ticket N° 24 474</span> <span style="margin-left: 200px;">Le 12/12/2022 à </span> <span style="margin-left: 70px;">14:54:00 </span>
 
         </div>
 
-        <div class="forme">
+        <div class="forme char" style="line-height: 50px;">
 
-            <p style="margin-right: 155px">
+            <span style="margin-right: 155px">
                 CAISSE1SUP
-            </p>
+            </span>
 
-        <div >
+        <span style="margin-left: 85px;">
 
-               <p class="ms-4">
+
                 <span>Caissier :</span> <span class="ms-4">1 ADJARA</span>
-               </p>
-
-        </div>
+                           </span>
        </div>
 
 
-    <div class="forme">
+    <div class="forme char" style="line-height: 50px;">
 
-        <p style="margin-right: 190px">
+        <span >
            Client : CLIENT COMPTOIR
-        </p>
+        </span>
 
-          <div >
 
-           <p class="ms-4">
+
+           <span style="margin-left: 25px;">
             Ifu:
-           </p>
+           </span>
 
-           </div>
+
 
 
     </div>
 
 
-    <div class="forme">
+    <div class="forme char">
 
         <p style="margin-right: 370px;">
            DETAIL POISSON
@@ -176,16 +223,18 @@
     <div class="forme">
         <table>
             <thead>
-             <td>Articles</td>
-             <td>Qté</td>
-             <td>Cond</td>
-             <td>Prix U.</td>
-             <td>Rem</td>
-             <td>Montant</td>
+           <tr class="tr">
+            <td>Articles</td>
+            <td>Qté</td>
+            <td>Cond</td>
+            <td>Prix U.</td>
+            <td>Rem</td>
+            <td>Montant</td>
+           </tr>
               </thead>
 
            <tbody>
-            <tr>
+            <tr class="tr">
                 <td>Articles</td>
              <td>Qté</td>
              <td>Cond</td>
@@ -199,65 +248,125 @@
 
     </div>
 
-    <div class="forme totalHt">
 
-           <span> Total HT (B) :</span>
-            <div class="trait"> <span style="margin-left: 170px;">0</span> </div>
+
+    <div class="inline-container l" >
+        <span class="text" >Total HT : </span>  <div class="line" style="margin-left: 130px;" >
+            <span class="number" style="margin-left: 180px;">0</span> </div>
+
+    </div>
+
+
+
+  <div class="container" style="display: flex;">
+    <div class="inline-containers" >
+        <span class="text" >Remise : </span>  <div class="line" style="margin-left: 100px;"  >
+            <span class="number" style="margin-left: 180px;">0</span> </div>
+
+    </div>
+
+    <div class="inline-container" style="line-height: 5px;" >
+        <span class="text" > TVA ( 18% ) : </span>  <div class="line" style="margin-left: 130px;" >
+            <span class="number" style="margin-left: 180px;">0</span> </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="inline-container l" >
+    <span class="text" >Total Exo. (A-EX) : </span>  <div class="line" style="margin-left: 130px;" >
+        <span class="number" style="margin-left: 180px;">0</span> </div>
+
+</div>
+
+
+<div class="container" style="display: flex;">
+    <div class="inline-containers" >
+        <span class="text" >Espece : </span>
+            <span class="number" style="margin-left: 180px;">1 000</span>
+
+    </div>
+
+    <div class="inline-container" style="line-height: 5px;" >
+        <span class="text" > AIB ( 0 %) :</span>  <div class="line" style="margin-left: 130px;" >
+            <span class="number" style="margin-left: 180px;">0</span> </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="container" style="display: flex;">
+    <div class="inline-containers" >
+        <span class="text" >Reliquat : </span>
+            <span class="number" style="margin-left: 180px;">1 000</span>
+
+    </div>
+
+    <div class="inline-container" style="line-height: 5px;" >
+        <span class="text" > TOTAL TTC :</span>  <div class="line" style="margin-left: 130px;" >
+            <span class="number" style="margin-left: 180px;">0</span> </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="container" style="display: flex;">
+    <div class="inline-containers" >
+        <span class="text" >CODE MECeF / DGI : </span>
 
 
     </div>
 
-
-    <div class="forme">
-        <div class="d-flex totalHt" style="margin-left: 40px;" >
-
-            <span>Remise : </span>
-            <div class="remise"> <span style="margin-left: 150px;">0</span> </div>
-
-
-        </div>
-
-        <div class="d-flex" style="margin-left: 80px;" >
-
-               <span class="me-3 fw-bold"> TVA </span> (
-            <span class="ms-2">
-                 18%
-            </span>  ) <span class="me-3 ms-2"> : </span>
-            <div class="tva"> <span style="margin-left: 165px;">0</span> </div>
-
-
-        </div>
+    <div class="inline" style="line-height: 2px;" >
+        <span class="text" > 7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH </span>
 
     </div>
 
-    <div class="forme" style="margin-left: 330px;">
-       <span>
-        Total Exo. (A-EX) :
-       </span>
-             <div class="tva"> <span style="margin-left: 170px;">0</span> </div>
+  </div>
 
+
+  <div class="container" style="display: flex; margin-top: 20px;">
+    <div>
+        <div class="inline-containers" >
+            <span class="text" >NIM : </span>
+                <span class="number" style="margin-left: 180px;">ED04000144</span>
+
+        </div>
+        <div class="inline-containers" >
+            <span class="text" >Compteurs : </span>
+                <span class="number" style="margin-left: 80px;">309 833 311 237 <span style="margin-left: 10px;">  FV</span></span>
+
+        </div>
+        <div class="inline-containers" >
+            <span class="text" >Heure :</span>
+                <span class="number" style="margin-left: 180px;">12/12/2022 14:54:47</span>
+
+        </div>
     </div>
 
-    <div class="forme">
-            <div class="d-flex" >
-                <span >
-                    Espece :
-                </span>
-                <span style="margin-left: 60px;">
-                    1000
-                </span>
-            </div>
+    <div class="inline-container" style="line-height: 5px;" >
+        {{-- <span class="text" > TOTAL TTC :</span>  <div class="line" style="margin-left: 130px;" >
+            <span class="number" style="margin-left: 180px;">0</span> </div> --}}
+<img src="" alt="">
+    </div>
 
-        <div class="d-flex mt-2" style="margin-left: 200px;">
-            <span>
-                AIB ( 0 %) :
-            </span>
-            <div class="tva"> <span style="margin-left: 170px;">0</span> </div>
-
-        </div>
+  </div>
 
 
-        </div>
+  <div style="text-align: center;">
+   <p>
+    LES ARTICLES VENDUS NE SONT NI REPRIS NI ECHANGES
+   </p>
+<p style="line-height: 1px;">
+    Merci pour votre fidélité à bientôt;
+</p>
+  </div>
+
+
 
 </body>
 </html>
