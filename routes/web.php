@@ -18,3 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
+
+Route::get('generate-recuA4', [PDFController::class, 'generateRecuA4']);
