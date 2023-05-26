@@ -114,6 +114,23 @@
         margin-left: 600px;
     }
 
+.line {
+
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px dotted black;
+        /* width: 200px; */
+        line-height: 1px;
+        width: auto;
+}
+
+.number {
+    font-size: 105px;
+    max-width: 100%;
+
+}
+
     .l {
 
         line-height: 50px;
@@ -135,17 +152,8 @@
         margin-left: 100px;
     }
 
-    .line {
 
-        border-bottom: 1px dotted black;
-        width: 200px;
-        line-height: 1px;
-    }
 
-    .number {
-        font-weight: bold;
-        white-space: nowrap;
-    }
 
     .inline {
         display: flex;
@@ -274,7 +282,7 @@
 <div style="margin-top: 30px" class="inline-container l ml">
     <span style=" font-weight: bold; font-size: 35px" class="text">Total HT (B): </span>
     <div class="line" style="margin-left: 220px;">
-        <span class="number" style="font-size:40px;margin-left: 180px;">0</span></div>
+        <span class="number" style="font-size:40px; margin: auto;">0</span></div>
 
 </div>
 
@@ -282,15 +290,15 @@
 <div class="container" style="display: flex;">
     <div class="inline-containers lr lh" >
         <span style=" font-weight: bold; font-size: 35px" class="text">Remise : </span>
-        <div class="line" style="margin-left: 140px;">
-            <span class="number" style="font-size:40px;margin-left: 180px;">0</span></div>
+        <div class="line" style="margin-left: 140px; width: 220px;" >
+            <span class="number" style="font-size:40px; ">0</span></div>
 
     </div>
 
     <div class="inline-container ml" style="line-height: 5px; margin-left: 570px">
         <span style=" font-weight: bold; font-size: 35px" class="text"> TVA ( 18% ) : </span>
-        <div class="line" style="margin-left: 250px;">
-            <span class="number" style="font-size:40px;margin-left: 180px;">0</span></div>
+        <div class="line" style="margin-left: 250px; ">
+            <span class="number" style="font-size:40px;">1000000</span></div>
 
     </div>
 
@@ -299,8 +307,8 @@
 
 <div class="inline-container l ml" style="margin-left: 550px">
     <span style=" font-weight: bold; font-size: 35px" class="text">Total Exo. (A-EX) : </span>
-    <div class="line" style="margin-left: 270px;">
-        <span class="number" style="font-size:40px;margin-left: 180px;">0</span></div>
+    <div class="line" style="margin-left: 310px;">
+        <span class="number" style="font-size:40px;">0</span></div>
 
 </div>
 
@@ -315,7 +323,7 @@
     <div class="inline-container ml" style="line-height: 5px;">
         <span style=" font-weight: bold;  font-size: 35px" class="text"> AIB ( 0 %) :</span>
         <div class="line" style="margin-left: 220px;">
-            <span class="number" style="font-size:40px;margin-left: 180px;">0</span></div>
+            <span class="number" style="font-size:40px;">0</span></div>
 
     </div>
 
@@ -331,8 +339,8 @@
 
     <div class="inline-container ml " style="line-height: 5px;">
         <span style=" font-weight: bold;  font-size: 35px" class="text"> TOTAL TTC :</span>
-        <div class="line" style="margin-left: 220px;">
-            <span class="number" style="margin-left: 180px; font-size: 35px">0</span></div>
+        <div class="line" style="margin-left: 240px;">
+            <span class="number" style="font-size:40px;">0</span></div>
 
     </div>
 
