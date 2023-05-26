@@ -105,8 +105,13 @@
     .inline-container {
         display: flex;
         align-items: center;
-        margin-left: 600px;
+       flex-wrap: nowrap;
+       flex-direction: row;
 
+    }
+
+    .ml{
+        margin-left: 600px;
     }
 
     .l {
@@ -117,8 +122,12 @@
     .inline-containers {
         display: flex;
         align-items: center;
-        line-height: 50px;
 
+
+    }
+
+    .lh{
+        line-height: 50px;
     }
 
     .lr {
@@ -143,7 +152,20 @@
         align-items: center;
         margin-left: 450px;
     }
+    .text-column {
+    display: flex;
+    flex-direction: column;
+}
 
+.text-row {
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+}
+
+.image-column {
+    margin-left: 20px;
+}
 
 </style>
 <body>
@@ -249,7 +271,7 @@
 </div>
 
 
-<div style="margin-top: 30px" class="inline-container l">
+<div style="margin-top: 30px" class="inline-container l ml">
     <span style=" font-weight: bold; font-size: 35px" class="text">Total HT (B): </span>
     <div class="line" style="margin-left: 220px;">
         <span class="number" style="font-size:40px;margin-left: 180px;">0</span></div>
@@ -258,14 +280,14 @@
 
 
 <div class="container" style="display: flex;">
-    <div class="inline-containers lr">
+    <div class="inline-containers lr lh" >
         <span style=" font-weight: bold; font-size: 35px" class="text">Remise : </span>
         <div class="line" style="margin-left: 140px;">
             <span class="number" style="font-size:40px;margin-left: 180px;">0</span></div>
 
     </div>
 
-    <div class="inline-container" style="line-height: 5px; margin-left: 570px">
+    <div class="inline-container ml" style="line-height: 5px; margin-left: 570px">
         <span style=" font-weight: bold; font-size: 35px" class="text"> TVA ( 18% ) : </span>
         <div class="line" style="margin-left: 250px;">
             <span class="number" style="font-size:40px;margin-left: 180px;">0</span></div>
@@ -275,7 +297,7 @@
 </div>
 
 
-<div class="inline-container l" style="margin-left: 550px">
+<div class="inline-container l ml" style="margin-left: 550px">
     <span style=" font-weight: bold; font-size: 35px" class="text">Total Exo. (A-EX) : </span>
     <div class="line" style="margin-left: 270px;">
         <span class="number" style="font-size:40px;margin-left: 180px;">0</span></div>
@@ -284,13 +306,13 @@
 
 
 <div class="container" style="display: flex;">
-    <div class="inline-containers">
+    <div class="inline-containers lh">
         <span style=" font-size: 35px" class="text">Espece : </span>
         <span style="margin-left: 180px;font-size: 35px">1 000</span>
 
     </div>
 
-    <div class="inline-container" style="line-height: 5px;">
+    <div class="inline-container ml" style="line-height: 5px;">
         <span style=" font-weight: bold;  font-size: 35px" class="text"> AIB ( 0 %) :</span>
         <div class="line" style="margin-left: 220px;">
             <span class="number" style="font-size:40px;margin-left: 180px;">0</span></div>
@@ -301,13 +323,13 @@
 
 
 <div class="container" style="display: flex;">
-    <div class="inline-containers">
+    <div class="inline-containers lh" >
         <span style=" font-size: 35px" class="text">Reliquat : </span>
         <span class="" style="font-size: 35px;margin-left: 180px;">0</span>
 
     </div>
 
-    <div class="inline-container" style="line-height: 5px;">
+    <div class="inline-container ml " style="line-height: 5px;">
         <span style=" font-weight: bold;  font-size: 35px" class="text"> TOTAL TTC :</span>
         <div class="line" style="margin-left: 220px;">
             <span class="number" style="margin-left: 180px; font-size: 35px">0</span></div>
@@ -317,23 +339,21 @@
 </div>
 
 
-<div class="container" style="display: flex; margin-top: 130px">
-    <div class="inline-containers">
-        <span style="font-size: 35px">CODE MECeF / DGI : </span>
+<div style="margin-top: 50px;">
+    <div style="display: inline-block; vertical-align: top;">
+        <div>
+            <span style="font-size: 35px; line-height: 5px;">CODE MECeF / DGI : </span>
 
-
-    </div>
-
-    <div class="inline" style="line-height: 2px;">
-        <span style="font-size: 35px"> 7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH </span>
+        </div>
 
     </div>
-
+    <div style="display: inline-block; margin-left: 40px; font-size: 35px">
+        7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH
+    </div>
 </div>
 
-
-<div class="container" style="display: flex; margin-top: 50px;">
-    <div>
+{{-- <div class="inline-container" style=" margin-top: 50px; flex-direction: row; flex-wrap: nowrap;">
+    <div >
         <div class="inline-containers">
             <span style="font-size: 40px" class="text">NIM : </span>
             <span style="margin-left: 180px;font-size: 40px">ED04000144</span>
@@ -351,17 +371,35 @@
         </div>
     </div>
 
-    <div class="inline-container" style="line-height: 5px;">
-        {{-- <span class="text" > TOTAL TTC :</span>  <div class="line" style="margin-left: 130px;" >
-            <span class="number" style="margin-left: 180px;">0</span> </div> --}}
-        <img src="" alt="">
+        <div class="inline-container">
+            <img src="data:image/png;base64, {!! base64_encode(QrCode::size(200)->generate('hello')) !!} ">
+
+        </div>
+</div>
+ --}}
+
+
+<div style="margin-top: 50px;">
+    <div style="display: inline-block; vertical-align: top;">
+        <div>
+            <span style="font-size: 40px">NIM :</span>
+            <span style="margin-left: 180px; font-size: 40px;">ED04000144</span>
+        </div>
+        <div style="margin-top: 10px;">
+            <span style="font-size: 40px">Compteurs :</span>
+            <span style="margin-left: 80px; font-size: 40px;">309 833/311 237 <span style="margin-left: 10px;">FV</span></span>
+        </div>
+        <div style="margin-top: 10px;">
+            <span style="font-size: 40px">Heure :</span>
+            <span style="margin-left: 180px; font-size: 40px;">12/12/2022 14:54:47</span>
+        </div>
     </div>
-
+    <div style="display: inline-block; margin-left: 40px; margin-top: 30px;">
+        <img src="data:image/png;base64, {!! base64_encode(QrCode::size(200)->generate('hello')) !!} " alt="Image" style="width: 200px; height: auto;">
+    </div>
 </div>
-<div class="container">
 
-    <img src="data:image/png;base64, {!! base64_encode(QrCode::size(200)->generate('hello')) !!} ">
-</div>
+
 
 <div style="text-align: center;">
     <p style="font-size: 35px;font-weight: bold">
