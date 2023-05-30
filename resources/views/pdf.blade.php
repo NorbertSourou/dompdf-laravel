@@ -403,7 +403,7 @@
         </div>
     </div>
     <div style="display: inline-block; margin-left: 150px; margin-top: 20px;">
-        <img src="data:image/png;base64, {!! base64_encode(QrCode::generate('7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH')) !!} " alt="Image" style="height: 250px;">
+        <img src="data:image/png;base64, {!! base64_encode(QrCode::generate('7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH')) !!} " alt="Image" style="width: 250px;">
     </div>
 </div>
 
