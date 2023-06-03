@@ -31,7 +31,8 @@
     }
 
     .header-texte {
-        font-size: 18px;
+        font-size: 40px;
+
     }
 
     .forme {
@@ -114,6 +115,8 @@
         flex-direction: row;
 
     }
+
+
 
     .ml {
         margin-left: 600px;
@@ -243,9 +246,9 @@
 
 
 <div class="grid">
-    <div class="contenu">
 
-        <header class="header forme">
+    <div class="contenu" >
+        <header class="header::after forme">
             <div class="logo">
                 {{-- <img src="{{asset('images/alarm.svg')}}" alt="" height="100px" > --}}
             </div>
@@ -346,53 +349,51 @@
         </div>
 
 
-        <div style="margin-top: 40px ;" class="inline-container l ml">
-            <span style=" font-weight: bold; font-size: 45px; margin-left: 220px;" class="text">Total HT (B): </span>
-            <div class="line"  style="border-bottom:1px none black; width: 400px; margin-left: 500px;">
-                <span class="number" style="font-size:45px;">0</span></div>
-        </div>
-
-
-        <div class="container" style="display: flex;">
-            <div class="inline-containers lr lh">
-                <span style=" font-weight: bold; font-size: 35px" class="text">Remise : </span>
-                <div class="line" style="margin-left: 140px; width: 220px;">
-                    <span class="number" style="font-size:40px; ">0</span></div>
-
-            </div>
-
-            <div class="inline-container ml" style="margin-top: 10px;line-height: 5px; margin-left: 570px">
-                <span style=" font-weight: bold; font-size: 35px;  margin-left: 220px;"
-                      class="text"> TVA ( 18% ) : </span>
-                <div class="line" style="margin-left: 250px; width: 400px; margin-left: 450px;">
-                    <span class="number" style="font-size:40px;">1000000</span></div>
-
-            </div>
-
-        </div>
-
-
-        <div class="inline-container l ml" style="margin-left: 550px ;margin-top: 20px;">
-            <span style=" font-weight: bold; font-size: 35px; margin-left: 180px;"
-                  class="text">Total Exo. (A-EX) : </span>
-            <div class="line" style="margin-left: 310px; width: 400px; margin-left: 480px;">
-                <span class="number" style="font-size:40px;">0</span></div>
-
+     <div style="margin-top: 40px ;" class="inline-container l ml">
+            <span style=" font-weight: bold; font-size: 55px; margin-left: 220px;" class="text">Total HT (B): </span>
+           <span>0</span>
         </div>
 
 
         <div class="container" style="display: flex;">
             <div class="inline-containers lh">
-                <span style=" font-size: 35px" class="text">Espece : </span>
-                <span style="margin-left: 180px;font-size: 35px">1 000</span>
+                <span style=" font-size: 55px;" class="text">Remise : </span>
+                <span style="margin-left: 180px;font-size: 55px;">0</span>
+
+            </div>
+
+            <div class="inline-container ml" style="line-height: 5px;  margin-top: 40px;">
+                <span style=" font-weight: bold; font-size: 55px;; margin-left: 220px;"
+                      class="text"> TVA ( 18 %) :</span>
+                <div class="" style="margin-left: 570px; width: 400px;">
+                    <span class="number" style="font-size:55px;">0</span></div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="inline-container l ml" style="margin-left: 550px ; margin-top: 40px;">
+            <span style=" font-weight: bold; font-size: 55px;; margin-left: 180px;"
+                  class="text">Total Exo. (A-EX) : </span>
+          <span>0</span>
+
+        </div>
+
+
+        <div class="container" style="display: flex; margin-top: 40px;">
+            <div class="inline-containers lh">
+                <span style=" font-size: 55px;" class="text">Espece : </span>
+                <span style="margin-left: 180px;font-size: 55px;">1 000</span>
 
             </div>
 
             <div class="inline-container ml" style="line-height: 5px;">
-                <span style=" font-weight: bold;  font-size: 35px; margin-left: 220px;"
+                <span style=" font-weight: bold;  font-size: 55px; margin-left: 220px;"
                       class="text"> AIB ( 0 %) :</span>
-                <div class="line" style="margin-left: 450px; width: 400px;">
-                    <span class="number" style="font-size:40px;">0</span></div>
+                <div class="" style="margin-left: 520px; width: 400px;">
+                    <span class="number" style="font-size: 55px;">0</span></div>
 
             </div>
 
@@ -401,15 +402,15 @@
 
         <div class="container" style="display: flex;">
             <div class="inline-containers lh">
-                <span style=" font-size: 35px" class="text">Reliquat : </span>
-                <span class="" style="font-size: 35px;margin-left: 180px;">0</span>
+                <span style=" font-size: 55px;" class="text">Reliquat : </span>
+                <span class="" style="font-size: 55px;;margin-left: 180px;">0</span>
 
             </div>
 
             <div class="inline-container ml " style="line-height: 5px;margin-top: 10px;">
-                <span style=" font-weight: bold;  font-size: 35px; margin-left: 220px;" class="text"> TOTAL TTC :</span>
-                <div class="line" style="margin-left: 450px; width: 400px;">
-                    <span class="number" style="font-size:40px;">0</span></div>
+                <span style=" font-weight: bold;  ffont-size: 55px;; margin-left: 220px;" class="text"> TOTAL TTC :</span>
+                <div class="" style="margin-left: 580px; width: 400px;">
+                    <span class="number" style="font-size: 55px;; " >0</span></div>
 
             </div>
 
@@ -419,12 +420,12 @@
         <div style="margin-top: 70px;">
             <div style="display: inline-block; vertical-align: top;">
                 <div>
-                    <span style="font-size: 35px; line-height: 5px;">CODE MECeF / DGI : </span>
+                    <span style="font-size: 55px;; line-height: 5px;">CODE MECeF / DGI : </span>
 
                 </div>
 
             </div>
-            <div style="display: inline-block; margin-left: 40px; font-size: 35px">
+            <div style="display: inline-block; margin-left: 40px; font-size: 55px;">
                 7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH
             </div>
         </div>
@@ -433,31 +434,33 @@
         <div style="margin-top: 50px; margin-bottom: 0">
             <div style="display: inline-block; vertical-align: top;">
                 <div>
-                    <span style="font-size: 40px">NIM :</span>
-                    <span style="margin-left: 180px; font-size: 40px;">ED04000144</span>
+                    <span style="font-size: 55px;">NIM :</span>
+                    <span style="margin-left: 180px; font-size: 55px;;">ED04000144</span>
                 </div>
                 <div style="margin-top: 10px;">
-                    <span style="font-size: 40px">Compteurs :</span>
-                    <span style="margin-left: 80px; font-size: 40px;">309 833/311 237 <span style="margin-left: 10px;">FV</span></span>
+                    <span style="font-size: 55px;">Compteurs :</span>
+                    <span style="margin-left: 80px; font-size: 55px;">309 833/311 237 <span style="margin-left: 10px;">FV</span></span>
                 </div>
                 <div style="margin-top: 10px;">
-                    <span style="font-size: 40px">Heure :</span>
-                    <span style="margin-left: 180px; font-size: 40px;">12/12/2022 14:54:47</span>
+                    <span style="font-size: 55px;">Heure :</span>
+                    <span style="margin-left: 180px; font-size: 55px;">12/12/2022 14:54:47</span>
+                </div>
+                <div style="display: inline-block; margin-left: 150px; margin-top: 20px;">
+                    <img
+                        src="data:image/png;base64, {!! base64_encode(QrCode::generate('7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH')) !!} "
+                        alt="Image" style="width: 250px;">
                 </div>
             </div>
-            <div style="display: inline-block; margin-left: 150px; margin-top: 20px;">
-                <img
-                    src="data:image/png;base64, {!! base64_encode(QrCode::generate('7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH')) !!} "
-                    alt="Image" style="width: 250px;">
-            </div>
+
         </div>
 
 
+
         <div style="text-align: center; margin-top: 0">
-            <p style="font-size: 35px;font-weight: bold">
+            <p style="font-size: 50px;font-weight: bold">
                 LES ARTICLES VENDUS NE SONT NI REPRIS NI ECHANGES
             </p>
-            <p style="line-height: 1px;font-size: 40px;">
+            <p style="line-height: 1px;font-size: 50px;">
                 Merci pour votre fidélité; à bientôt
             </p>
         </div>
@@ -566,54 +569,51 @@
         </div>
 
 
-        <div style="margin-top: 40px ;" class="inline-container l ml">
-            <span style=" font-weight: bold; font-size: 35px; margin-left: 220px;" class="text">Total HT (B): </span>
-            <div class="line" style="margin-left: 220px; width: 400px; margin-left: 450px;">
-                <span class="number" style="font-size:40px; margin: auto;">0</span></div>
-
-        </div>
-
-
-        <div class="container" style="display: flex;">
-            <div class="inline-containers lr lh">
-                <span style=" font-weight: bold; font-size: 35px" class="text">Remise : </span>
-                <div class="line" style="margin-left: 140px; width: 220px;">
-                    <span class="number" style="font-size:40px; ">0</span></div>
-
-            </div>
-
-            <div class="inline-container ml" style="margin-top: 10px;line-height: 5px; margin-left: 570px">
-                <span style=" font-weight: bold; font-size: 35px;  margin-left: 220px;"
-                      class="text"> TVA ( 18% ) : </span>
-                <div class="line" style="margin-left: 250px; width: 400px; margin-left: 450px;">
-                    <span class="number" style="font-size:40px;">1000000</span></div>
-
-            </div>
-
-        </div>
-
-
-        <div class="inline-container l ml" style="margin-left: 550px ;margin-top: 20px;">
-            <span style=" font-weight: bold; font-size: 35px; margin-left: 180px;"
-                  class="text">Total Exo. (A-EX) : </span>
-            <div class="line" style="margin-left: 310px; width: 400px; margin-left: 480px;">
-                <span class="number" style="font-size:40px;">0</span></div>
-
+     <div style="margin-top: 40px ;" class="inline-container l ml">
+            <span style=" font-weight: bold; font-size: 55px; margin-left: 220px;" class="text">Total HT (B): </span>
+           <span>0</span>
         </div>
 
 
         <div class="container" style="display: flex;">
             <div class="inline-containers lh">
-                <span style=" font-size: 35px" class="text">Espece : </span>
-                <span style="margin-left: 180px;font-size: 35px">1 000</span>
+                <span style=" font-size: 55px;" class="text">Remise : </span>
+                <span style="margin-left: 180px;font-size: 55px;">0</span>
+
+            </div>
+
+            <div class="inline-container ml" style="line-height: 5px;  margin-top: 40px;">
+                <span style=" font-weight: bold; font-size: 55px;; margin-left: 220px;"
+                      class="text"> TVA ( 18 %) :</span>
+                <div class="" style="margin-left: 570px; width: 400px;">
+                    <span class="number" style="font-size:55px;">0</span></div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="inline-container l ml" style="margin-left: 550px ; margin-top: 40px;">
+            <span style=" font-weight: bold; font-size: 55px;; margin-left: 180px;"
+                  class="text">Total Exo. (A-EX) : </span>
+          <span>0</span>
+
+        </div>
+
+
+        <div class="container" style="display: flex; margin-top: 40px;">
+            <div class="inline-containers lh">
+                <span style=" font-size: 55px;" class="text">Espece : </span>
+                <span style="margin-left: 180px;font-size: 55px;">1 000</span>
 
             </div>
 
             <div class="inline-container ml" style="line-height: 5px;">
-                <span style=" font-weight: bold;  font-size: 35px; margin-left: 220px;"
+                <span style=" font-weight: bold;  font-size: 55px; margin-left: 220px;"
                       class="text"> AIB ( 0 %) :</span>
-                <div class="line" style="margin-left: 450px; width: 400px;">
-                    <span class="number" style="font-size:40px;">0</span></div>
+                <div class="" style="margin-left: 520px; width: 400px;">
+                    <span class="number" style="font-size: 55px;">0</span></div>
 
             </div>
 
@@ -622,15 +622,15 @@
 
         <div class="container" style="display: flex;">
             <div class="inline-containers lh">
-                <span style=" font-size: 35px" class="text">Reliquat : </span>
-                <span class="" style="font-size: 35px;margin-left: 180px;">0</span>
+                <span style=" font-size: 55px;" class="text">Reliquat : </span>
+                <span class="" style="font-size: 55px;;margin-left: 180px;">0</span>
 
             </div>
 
             <div class="inline-container ml " style="line-height: 5px;margin-top: 10px;">
-                <span style=" font-weight: bold;  font-size: 35px; margin-left: 220px;" class="text"> TOTAL TTC :</span>
-                <div class="line" style="margin-left: 450px; width: 400px;">
-                    <span class="number" style="font-size:40px;">0</span></div>
+                <span style=" font-weight: bold;  ffont-size: 55px;; margin-left: 220px;" class="text"> TOTAL TTC :</span>
+                <div class="" style="margin-left: 580px; width: 400px;">
+                    <span class="number" style="font-size: 55px;; " >0</span></div>
 
             </div>
 
@@ -640,12 +640,12 @@
         <div style="margin-top: 70px;">
             <div style="display: inline-block; vertical-align: top;">
                 <div>
-                    <span style="font-size: 35px; line-height: 5px;">CODE MECeF / DGI : </span>
+                    <span style="font-size: 55px;; line-height: 5px;">CODE MECeF / DGI : </span>
 
                 </div>
 
             </div>
-            <div style="display: inline-block; margin-left: 40px; font-size: 35px">
+            <div style="display: inline-block; margin-left: 40px; font-size: 55px;">
                 7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH
             </div>
         </div>
@@ -654,31 +654,33 @@
         <div style="margin-top: 50px; margin-bottom: 0">
             <div style="display: inline-block; vertical-align: top;">
                 <div>
-                    <span style="font-size: 40px">NIM :</span>
-                    <span style="margin-left: 180px; font-size: 40px;">ED04000144</span>
+                    <span style="font-size: 55px;">NIM :</span>
+                    <span style="margin-left: 180px; font-size: 55px;;">ED04000144</span>
                 </div>
                 <div style="margin-top: 10px;">
-                    <span style="font-size: 40px">Compteurs :</span>
-                    <span style="margin-left: 80px; font-size: 40px;">309 833/311 237 <span style="margin-left: 10px;">FV</span></span>
+                    <span style="font-size: 55px;">Compteurs :</span>
+                    <span style="margin-left: 80px; font-size: 55px;">309 833/311 237 <span style="margin-left: 10px;">FV</span></span>
                 </div>
                 <div style="margin-top: 10px;">
-                    <span style="font-size: 40px">Heure :</span>
-                    <span style="margin-left: 180px; font-size: 40px;">12/12/2022 14:54:47</span>
+                    <span style="font-size: 55px;">Heure :</span>
+                    <span style="margin-left: 180px; font-size: 55px;">12/12/2022 14:54:47</span>
+                </div>
+                <div style="display: inline-block; margin-left: 150px; margin-top: 20px;">
+                    <img
+                        src="data:image/png;base64, {!! base64_encode(QrCode::generate('7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH')) !!} "
+                        alt="Image" style="width: 250px;">
                 </div>
             </div>
-            <div style="display: inline-block; margin-left: 150px; margin-top: 20px;">
-                <img
-                    src="data:image/png;base64, {!! base64_encode(QrCode::generate('7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH')) !!} "
-                    alt="Image" style="width: 250px;">
-            </div>
+
         </div>
 
 
+
         <div style="text-align: center; margin-top: 0">
-            <p style="font-size: 35px;font-weight: bold">
+            <p style="font-size: 50px;font-weight: bold">
                 LES ARTICLES VENDUS NE SONT NI REPRIS NI ECHANGES
             </p>
-            <p style="line-height: 1px;font-size: 40px;">
+            <p style="line-height: 1px;font-size: 50px;">
                 Merci pour votre fidélité; à bientôt
             </p>
         </div>
