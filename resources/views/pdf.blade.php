@@ -54,8 +54,8 @@
 
     table {
         border-collapse: collapse;
-        width: 10%;
-
+        //width: 10%;
+        overflow: auto;
     }
 
     .tr td {
@@ -183,18 +183,45 @@
     }
 
     .grid {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
+        columns: 2; /* Définit deux colonnes */
+        column-gap: 20px; /* Espacement entre les colonnes */
+        max-width: 1200px; /* Largeur maximale du conteneur */
+
+display: inline;
+
     }
 
     .contenu {
+        display: inline;
         float: left;
-        width: 50%;
-        padding-right: 45px;
-        box-sizing: border-box;
-        overflow: auto;
-        padding: 10px; /* Ajouter cette ligne */
+     //    break-inside: avoid;
+     break-inside: avoid; /* Évite les sauts de colonne à l'intérieur du bloc */
+     margin-bottom: 20px; /* Espacement entre les blocs */
+     flex-basis: 50%;
+
+
+        //box-sizing: border-box;
+    }
+
+    .contenu-d{
+       background-color: white;
+       display: inline;
+        float: left;
+     //    break-inside: avoid;
+     break-inside: avoid; /* Évite les sauts de colonne à l'intérieur du bloc */
+     margin-bottom: 20px; /* Espacement entre les blocs */
+     flex-basis: 50%;
+    }
+
+    .contenu-g{
+        background-color: white;
+        display: inline;
+        float: right;
+     //    break-inside: avoid;
+     break-inside: avoid; /* Évite les sauts de colonne à l'intérieur du bloc */
+     margin-bottom: 20px; /* Espacement entre les blocs */
+     flex-basis: 50%;
+
     }
 
     .header::before {
@@ -218,6 +245,12 @@
         margin-left: -40px; /* Ajouter de l'espace à gauche de la barre */
         background-size: 20%;
     }
+
+    @media print {
+        .contenu {
+          page-break-inside: avoid;
+        }
+      }
 
 
 </style>
@@ -245,447 +278,487 @@
 {{--</header>--}}
 
 
-<div class="grid">
 
-    <div class="contenu" >
-        <header class="header::after forme">
-            <div class="logo">
-                {{-- <img src="{{asset('images/alarm.svg')}}" alt="" height="100px" > --}}
-            </div>
-            <div class="texte">
-                <h1 style="line-height: 0;">
-                    Martin pecheur Sarl
-                </h1>
-                <div class="header-texte">
-                    <u>Capital Social</u> <b>1.000.000 FCFA </b> IMPORT EXPORT COMMERCE GENERAL
+    <table style="position: absolute; overflow: auto;">
+        <tr>
+
+            <td >
+                <header class="header::after forme">
+                    <div class="logo">
+                        {{-- <img src="{{asset('images/alarm.svg')}}" alt="" height="100px" > --}}
+                    </div>
+                    <div class="texte">
+                        <h1 style="line-height: 0;">
+                            Martin pecheur Sarl
+                        </h1>
+                        <div class="header-texte">
+                            <u>Capital Social</u> <b>1.000.000 FCFA </b> IMPORT EXPORT COMMERCE GENERAL
+                        </div>
+                        <div style="margin-left: 10px;" class="header-texte">
+                            <b><u>Compte Bancaire </u></b> : BIBE 91/7031880301/93 SGB 03153282010182
+                        </div>
+                        <div style="margin-left: 20px;" class="header-texte">
+                            <b> RC</b>: RB Porto-Novo- 2007-B-467 <span class="ms-3"><b>IFU</b>:3201000073919</span>
+                        </div>
+                    </div>
+
+                </header>
+
+                <div class="hr"></div>
+
+
+                <div style="font-size: 45px; margin-top: 50px" class="forme char">
+
+                    <span>Ticket N° 1</span> <span style="margin-left: 200px;">Le 12/12/2022 à </span> <span
+                        style="margin-left: 70px;">14:54:00 </span>
+
                 </div>
-                <div style="margin-left: 10px;" class="header-texte">
-                    <b><u>Compte Bancaire </u></b> : BIBE 91/7031880301/93 SGB 03153282010182
+
+                <div class="forme char" style="line-height: 50px; font-size: 45px;margin-top: 15px">
+
+                                <span style="margin-right: 155px">
+                                    CAISSE1SUP
+                                </span>
+
+                    <span style="margin-left: 85px;">
+
+
+                                    <span>Caissier :</span> <span style="margin-left: 20px" class="ms-4">1 ADJARA</span>
+                                            </span>
                 </div>
-                <div style="margin-left: 20px;" class="header-texte">
-                    <b> RC</b>: RB Porto-Novo- 2007-B-467 <span class="ms-3"><b>IFU</b>:3201000073919</span>
-                </div>
-            </div>
-
-        </header>
-
-        <div class="hr"></div>
 
 
-        <div style="font-size: 45px; margin-top: 50px" class="forme char">
+                <div class="forme char" style="line-height: 50px;font-size: 45px; margin-top: 15px">
 
-            <span>Ticket N° 1</span> <span style="margin-left: 200px;">Le 12/12/2022 à </span> <span
-                style="margin-left: 70px;">14:54:00 </span>
-
-        </div>
-
-        <div class="forme char" style="line-height: 50px; font-size: 45px;margin-top: 15px">
-
-                        <span style="margin-right: 155px">
-                            CAISSE1SUP
+                        <span>
+                        Client : CLIENT COMPTOIR
                         </span>
 
-            <span style="margin-left: 85px;">
 
-
-                            <span>Caissier :</span> <span style="margin-left: 20px" class="ms-4">1 ADJARA</span>
-                                    </span>
-        </div>
-
-
-        <div class="forme char" style="line-height: 50px;font-size: 45px; margin-top: 15px">
-
-                <span>
-                Client : CLIENT COMPTOIR
-                </span>
-
-
-            <span style="margin-left: 25px;">
-                    Ifu:
-                </span>
-
-
-        </div>
-
-        <div class="forme char" style="line-height: 50px;font-size: 45px; margin-top: 15px">
-
-                <span style="margin-right: 155px">
-                DJREGBE
-                </span>
-
-
-            <span>
-                    DETAIL POISSON
-                </span>
-        </div>
-
-
-        <div class="forme" style="margin-top: 25px">
-            <table>
-                <thead>
-                <tr class="tr">
-                    <td width="120">Articles</td>
-                    <td align="center" width="45">Qté</td>
-                    <td width="35">Cond</td>
-                    <td width="45">Prix U.</td>
-                    {{-- <td width="10">Rem</td> --}}
-                    <td width="75">Montant</td>
-                </tr>
-                </thead>
-
-                <tbody>
-                <tr class="tr">
-                    <td>HM SBS 20KG NOUV (A-EX)</td>
-                    <td align="center">1,00</td>
-                    <td>KG</td>
-                    <td>1 000</td>
-                    {{-- <td>0</td> --}}
-                    <td>1000</td>
-                </tr>
-
-                </tbody>
-            </table>
-
-        </div>
-
-
-     <div style="margin-top: 40px ;" class="inline-container l ml">
-            <span style=" font-weight: bold; font-size: 55px; margin-left: 220px;" class="text">Total HT (B): </span>
-           <span>0</span>
-        </div>
-
-
-        <div class="container" style="display: flex;">
-            <div class="inline-containers lh">
-                <span style=" font-size: 55px;" class="text">Remise : </span>
-                <span style="margin-left: 180px;font-size: 55px;">0</span>
-
-            </div>
-
-            <div class="inline-container ml" style="line-height: 5px;  margin-top: 40px;">
-                <span style=" font-weight: bold; font-size: 55px;; margin-left: 220px;"
-                      class="text"> TVA ( 18 %) :</span>
-                <div class="" style="margin-left: 570px; width: 400px;">
-                    <span class="number" style="font-size:55px;">0</span></div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="inline-container l ml" style="margin-left: 550px ; margin-top: 40px;">
-            <span style=" font-weight: bold; font-size: 55px;; margin-left: 180px;"
-                  class="text">Total Exo. (A-EX) : </span>
-          <span>0</span>
-
-        </div>
-
-
-        <div class="container" style="display: flex; margin-top: 40px;">
-            <div class="inline-containers lh">
-                <span style=" font-size: 55px;" class="text">Espece : </span>
-                <span style="margin-left: 180px;font-size: 55px;">1 000</span>
-
-            </div>
-
-            <div class="inline-container ml" style="line-height: 5px;">
-                <span style=" font-weight: bold;  font-size: 55px; margin-left: 220px;"
-                      class="text"> AIB ( 0 %) :</span>
-                <div class="" style="margin-left: 520px; width: 400px;">
-                    <span class="number" style="font-size: 55px;">0</span></div>
-
-            </div>
-
-        </div>
-
-
-        <div class="container" style="display: flex;">
-            <div class="inline-containers lh">
-                <span style=" font-size: 55px;" class="text">Reliquat : </span>
-                <span class="" style="font-size: 55px;;margin-left: 180px;">0</span>
-
-            </div>
-
-            <div class="inline-container ml " style="line-height: 5px;margin-top: 10px;">
-                <span style=" font-weight: bold;  ffont-size: 55px;; margin-left: 220px;" class="text"> TOTAL TTC :</span>
-                <div class="" style="margin-left: 580px; width: 400px;">
-                    <span class="number" style="font-size: 55px;; " >0</span></div>
-
-            </div>
-
-        </div>
-
-
-        <div style="margin-top: 70px;">
-            <div style="display: inline-block; vertical-align: top;">
-                <div>
-                    <span style="font-size: 55px;; line-height: 5px;">CODE MECeF / DGI : </span>
-
-                </div>
-
-            </div>
-            <div style="display: inline-block; margin-left: 40px; font-size: 55px;">
-                7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH
-            </div>
-        </div>
-
-
-        <div style="margin-top: 50px; margin-bottom: 0">
-            <div style="display: inline-block; vertical-align: top;">
-                <div>
-                    <span style="font-size: 55px;">NIM :</span>
-                    <span style="margin-left: 180px; font-size: 55px;;">ED04000144</span>
-                </div>
-                <div style="margin-top: 10px;">
-                    <span style="font-size: 55px;">Compteurs :</span>
-                    <span style="margin-left: 80px; font-size: 55px;">309 833/311 237 <span style="margin-left: 10px;">FV</span></span>
-                </div>
-                <div style="margin-top: 10px;">
-                    <span style="font-size: 55px;">Heure :</span>
-                    <span style="margin-left: 180px; font-size: 55px;">12/12/2022 14:54:47</span>
-                </div>
-                <div style="display: inline-block; margin-left: 150px; margin-top: 20px;">
-                    <img
-                        src="data:image/png;base64, {!! base64_encode(QrCode::generate('7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH')) !!} "
-                        alt="Image" style="width: 250px;">
-                </div>
-            </div>
-
-        </div>
-
-
-
-        <div style="text-align: center; margin-top: 0">
-            <p style="font-size: 50px;font-weight: bold">
-                LES ARTICLES VENDUS NE SONT NI REPRIS NI ECHANGES
-            </p>
-            <p style="line-height: 1px;font-size: 50px;">
-                Merci pour votre fidélité; à bientôt
-            </p>
-        </div>
-    </div>
-
-
-    <div class="contenu" style="margin-left: 60px;">
-        <header class="header::after forme">
-            <div class="logo">
-                {{-- <img src="{{asset('images/alarm.svg')}}" alt="" height="100px" > --}}
-            </div>
-            <div class="texte">
-                <h1 style="line-height: 0;">
-                    Martin pecheur Sarl
-                </h1>
-                <div class="header-texte">
-                    <u>Capital Social</u> <b>1.000.000 FCFA </b> IMPORT EXPORT COMMERCE GENERAL
-                </div>
-                <div style="margin-left: 10px;" class="header-texte">
-                    <b><u>Compte Bancaire </u></b> : BIBE 91/7031880301/93 SGB 03153282010182
-                </div>
-                <div style="margin-left: 20px;" class="header-texte">
-                    <b> RC</b>: RB Porto-Novo- 2007-B-467 <span class="ms-3"><b>IFU</b>:3201000073919</span>
-                </div>
-            </div>
-
-        </header>
-
-        <div class="hr"></div>
-
-
-        <div style="font-size: 45px; margin-top: 50px" class="forme char">
-
-            <span>Ticket N° 1</span> <span style="margin-left: 200px;">Le 12/12/2022 à </span> <span
-                style="margin-left: 70px;">14:54:00 </span>
-
-        </div>
-
-        <div class="forme char" style="line-height: 50px; font-size: 45px;margin-top: 15px">
-
-                        <span style="margin-right: 155px">
-                            CAISSE1SUP
+                    <span style="margin-left: 25px;">
+                            Ifu:
                         </span>
 
-            <span style="margin-left: 85px;">
-
-
-                            <span>Caissier :</span> <span style="margin-left: 20px" class="ms-4">1 ADJARA</span>
-                                    </span>
-        </div>
-
-
-        <div class="forme char" style="line-height: 50px;font-size: 45px; margin-top: 15px">
-
-                <span>
-                Client : CLIENT COMPTOIR
-                </span>
-
-
-            <span style="margin-left: 25px;">
-                    Ifu:
-                </span>
-
-
-        </div>
-
-        <div class="forme char" style="line-height: 50px;font-size: 45px; margin-top: 15px">
-
-                <span style="margin-right: 155px">
-                DJREGBE
-                </span>
-
-
-            <span>
-                    DETAIL POISSON
-                </span>
-        </div>
-
-
-        <div class="forme" style="margin-top: 25px">
-            <table>
-                <thead>
-                <tr class="tr">
-                    <td width="120">Articles</td>
-                    <td align="center" width="45">Qté</td>
-                    <td width="35">Cond</td>
-                    <td width="45">Prix U.</td>
-                    {{-- <td width="10">Rem</td> --}}
-                    <td width="75">Montant</td>
-                </tr>
-                </thead>
-
-                <tbody>
-                <tr class="tr">
-                    <td>HM SBS 20KG NOUV (A-EX)</td>
-                    <td align="center">1,00</td>
-                    <td>KG</td>
-                    <td>1 000</td>
-                    {{-- <td>0</td> --}}
-                    <td>1000</td>
-                </tr>
-
-                </tbody>
-            </table>
-
-        </div>
-
-
-     <div style="margin-top: 40px ;" class="inline-container l ml">
-            <span style=" font-weight: bold; font-size: 55px; margin-left: 220px;" class="text">Total HT (B): </span>
-           <span>0</span>
-        </div>
-
-
-        <div class="container" style="display: flex;">
-            <div class="inline-containers lh">
-                <span style=" font-size: 55px;" class="text">Remise : </span>
-                <span style="margin-left: 180px;font-size: 55px;">0</span>
-
-            </div>
-
-            <div class="inline-container ml" style="line-height: 5px;  margin-top: 40px;">
-                <span style=" font-weight: bold; font-size: 55px;; margin-left: 220px;"
-                      class="text"> TVA ( 18 %) :</span>
-                <div class="" style="margin-left: 570px; width: 400px;">
-                    <span class="number" style="font-size:55px;">0</span></div>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="inline-container l ml" style="margin-left: 550px ; margin-top: 40px;">
-            <span style=" font-weight: bold; font-size: 55px;; margin-left: 180px;"
-                  class="text">Total Exo. (A-EX) : </span>
-          <span>0</span>
-
-        </div>
-
-
-        <div class="container" style="display: flex; margin-top: 40px;">
-            <div class="inline-containers lh">
-                <span style=" font-size: 55px;" class="text">Espece : </span>
-                <span style="margin-left: 180px;font-size: 55px;">1 000</span>
-
-            </div>
-
-            <div class="inline-container ml" style="line-height: 5px;">
-                <span style=" font-weight: bold;  font-size: 55px; margin-left: 220px;"
-                      class="text"> AIB ( 0 %) :</span>
-                <div class="" style="margin-left: 520px; width: 400px;">
-                    <span class="number" style="font-size: 55px;">0</span></div>
-
-            </div>
-
-        </div>
-
-
-        <div class="container" style="display: flex;">
-            <div class="inline-containers lh">
-                <span style=" font-size: 55px;" class="text">Reliquat : </span>
-                <span class="" style="font-size: 55px;;margin-left: 180px;">0</span>
-
-            </div>
-
-            <div class="inline-container ml " style="line-height: 5px;margin-top: 10px;">
-                <span style=" font-weight: bold;  ffont-size: 55px;; margin-left: 220px;" class="text"> TOTAL TTC :</span>
-                <div class="" style="margin-left: 580px; width: 400px;">
-                    <span class="number" style="font-size: 55px;; " >0</span></div>
-
-            </div>
-
-        </div>
-
-
-        <div style="margin-top: 70px;">
-            <div style="display: inline-block; vertical-align: top;">
-                <div>
-                    <span style="font-size: 55px;; line-height: 5px;">CODE MECeF / DGI : </span>
 
                 </div>
 
-            </div>
-            <div style="display: inline-block; margin-left: 40px; font-size: 55px;">
-                7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH
-            </div>
-        </div>
+                <div class="forme char" style="line-height: 50px;font-size: 45px; margin-top: 15px">
+
+                        <span style="margin-right: 155px">
+                        DJREGBE
+                        </span>
 
 
-        <div style="margin-top: 50px; margin-bottom: 0">
-            <div style="display: inline-block; vertical-align: top;">
-                <div>
-                    <span style="font-size: 55px;">NIM :</span>
-                    <span style="margin-left: 180px; font-size: 55px;;">ED04000144</span>
+                    <span>
+                            DETAIL POISSON
+                        </span>
                 </div>
-                <div style="margin-top: 10px;">
-                    <span style="font-size: 55px;">Compteurs :</span>
-                    <span style="margin-left: 80px; font-size: 55px;">309 833/311 237 <span style="margin-left: 10px;">FV</span></span>
+
+
+                <div  style="margin-top: 25px">
+                    <table>
+                        <thead>
+                        <tr class="tr">
+                            <td>Articles</td>
+                            <td align="center">Qté</td>
+                            <td >Cond</td>
+                            <td >Prix U.</td>
+                            {{-- <td width="10">Rem</td> --}}
+                            <td width="75">Montant</td>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr class="tr">
+                            <td>HM SBS 20KG NOUV (A-EX)</td>
+                            <td align="center">1,00</td>
+                            <td>KG</td>
+                            <td>1 000</td>
+                            {{-- <td>0</td> --}}
+                            <td>1000</td>
+                        </tr>
+                        <tr class="tr">
+                            <td>HM SBS 20KG NOUV (A-EX)</td>
+                            <td align="center">1,00</td>
+                            <td>KG</td>
+                            <td>1 000</td>
+                            {{-- <td>0</td> --}}
+                            <td>1000</td>
+                        </tr>
+                        <tr class="tr">
+                            <td>HM SBS 20KG NOUV (A-EX)</td>
+                            <td align="center">1,00</td>
+                            <td>KG</td>
+                            <td>1 000</td>
+                            {{-- <td>0</td> --}}
+                            <td>1000</td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+
                 </div>
-                <div style="margin-top: 10px;">
-                    <span style="font-size: 55px;">Heure :</span>
-                    <span style="margin-left: 180px; font-size: 55px;">12/12/2022 14:54:47</span>
+
+
+              <div style="margin-top: 40px ;" class="inline-container l ml">
+                    <span style=" font-weight: bold; font-size: 55px; margin-left: 220px;" class="text">Total HT (B): </span>
+                <span>0</span>
                 </div>
-                <div style="display: inline-block; margin-left: 150px; margin-top: 20px;">
-                    <img
-                        src="data:image/png;base64, {!! base64_encode(QrCode::generate('7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH')) !!} "
-                        alt="Image" style="width: 250px;">
+
+
+                <div class="container" style="display: flex;">
+                    <div class="inline-containers lh">
+                        <span style=" font-size: 55px;" class="text">Remise : </span>
+                        <span style="margin-left: 180px;font-size: 55px;">0</span>
+
+                    </div>
+
+                    <div class="inline-container ml" style="line-height: 5px;  margin-top: 40px;">
+                        <span style=" font-weight: bold; font-size: 55px;; margin-left: 220px;"
+                            class="text"> TVA ( 18 %) :</span>
+                        <div class="" style="margin-left: 570px; width: 400px;">
+                            <span class="number" style="font-size:55px;">0</span></div>
+
+                    </div>
+
                 </div>
-            </div>
-
-        </div>
 
 
 
-        <div style="text-align: center; margin-top: 0">
-            <p style="font-size: 50px;font-weight: bold">
-                LES ARTICLES VENDUS NE SONT NI REPRIS NI ECHANGES
-            </p>
-            <p style="line-height: 1px;font-size: 50px;">
-                Merci pour votre fidélité; à bientôt
-            </p>
-        </div>
-    </div>
-</div>
+                <div class="inline-container l ml" style="margin-left: 550px ; margin-top: 40px;">
+                    <span style=" font-weight: bold; font-size: 55px;; margin-left: 180px;"
+                        class="text">Total Exo. (A-EX) : </span>
+                <span>0</span>
+
+                </div>
+
+
+                <div class="container" style="display: flex; margin-top: 40px;">
+                    <div class="inline-containers lh">
+                        <span style=" font-size: 55px;" class="text">Espece : </span>
+                        <span style="margin-left: 180px;font-size: 55px;">1 000</span>
+
+                    </div>
+
+                    <div class="inline-container ml" style="line-height: 5px;">
+                        <span style=" font-weight: bold;  font-size: 55px; margin-left: 220px;"
+                            class="text"> AIB ( 0 %) :</span>
+                        <div class="" style="margin-left: 520px; width: 400px;">
+                            <span class="number" style="font-size: 55px;">0</span></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="container" style="display: flex;">
+                    <div class="inline-containers lh">
+                        <span style=" font-size: 55px;" class="text">Reliquat : </span>
+                        <span class="" style="font-size: 55px;;margin-left: 180px;">0</span>
+
+                    </div>
+
+                    <div class="inline-container ml " style="line-height: 5px;margin-top: 10px;">
+                        <span style=" font-weight: bold;  ffont-size: 55px;; margin-left: 220px;" class="text"> TOTAL TTC :</span>
+                        <div class="" style="margin-left: 580px; width: 400px;">
+                            <span class="number" style="font-size: 55px;; " >0</span></div>
+
+                    </div>
+
+                </div>
+
+
+                <div style="margin-top: 70px;">
+                    <div style="display: inline-block; vertical-align: top;">
+                        <div>
+                            <span style="font-size: 55px;; line-height: 5px;">CODE MECeF / DGI : </span>
+
+                        </div>
+
+                    </div>
+                    <div style="display: inline-block; margin-left: 40px; font-size: 55px;">
+                        7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH
+                    </div>
+                </div>
+
+
+                <div style="margin-top: 50px; margin-bottom: 0">
+                    <div style="display: inline-block; vertical-align: top;">
+                        <div>
+                            <span style="font-size: 55px;">NIM :</span>
+                            <span style="margin-left: 180px; font-size: 55px;;">ED04000144</span>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <span style="font-size: 55px;">Compteurs :</span>
+                            <span style="margin-left: 80px; font-size: 55px;">309 833/311 237 <span style="margin-left: 10px;">FV</span></span>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <span style="font-size: 55px;">Heure :</span>
+                            <span style="margin-left: 180px; font-size: 55px;">12/12/2022 14:54:47</span>
+                        </div>
+                        <div style="display: inline-block; margin-left: 150px; margin-top: 20px;">
+                            <img
+                                src="data:image/png;base64, {!! base64_encode(QrCode::generate('7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH')) !!} "
+                                alt="Image" style="width: 250px;">
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div style="text-align: center; margin-top: 0">
+                    <p style="font-size: 50px;font-weight: bold">
+                        LES ARTICLES VENDUS NE SONT NI REPRIS NI ECHANGES
+                    </p>
+                    <p style="line-height: 1px;font-size: 50px;">
+                        Merci pour votre fidélité; à bientôt
+                    </p>
+                </div>
+
+
+            </td>
+
+
+            <td>
+                <header class="header::after forme">
+                    <div class="logo">
+                        {{-- <img src="{{asset('images/alarm.svg')}}" alt="" height="100px" > --}}
+                    </div>
+                    <div class="texte">
+                        <h1 style="line-height: 0;">
+                            Martin pecheur Sarl
+                        </h1>
+                        <div class="header-texte">
+                            <u>Capital Social</u> <b>1.000.000 FCFA </b> IMPORT EXPORT COMMERCE GENERAL
+                        </div>
+                        <div style="margin-left: 10px;" class="header-texte">
+                            <b><u>Compte Bancaire </u></b> : BIBE 91/7031880301/93 SGB 03153282010182
+                        </div>
+                        <div style="margin-left: 20px;" class="header-texte">
+                            <b> RC</b>: RB Porto-Novo- 2007-B-467 <span class="ms-3"><b>IFU</b>:3201000073919</span>
+                        </div>
+                    </div>
+
+                </header>
+
+                <div class="hr"></div>
+
+
+                <div style="font-size: 45px; margin-top: 50px" class="forme char">
+
+                    <span>Ticket N° 1</span> <span style="margin-left: 200px;">Le 12/12/2022 à </span> <span
+                        style="margin-left: 70px;">14:54:00 </span>
+
+                </div>
+
+                <div class="forme char" style="line-height: 50px; font-size: 45px;margin-top: 15px">
+
+                                <span style="margin-right: 155px">
+                                    CAISSE1SUP
+                                </span>
+
+                    <span style="margin-left: 85px;">
+
+
+                                    <span>Caissier :</span> <span style="margin-left: 20px" class="ms-4">1 ADJARA</span>
+                                            </span>
+                </div>
+
+
+                <div class="forme char" style="line-height: 50px;font-size: 45px; margin-top: 15px">
+
+                        <span>
+                        Client : CLIENT COMPTOIR
+                        </span>
+
+
+                    <span style="margin-left: 25px;">
+                            Ifu:
+                        </span>
+
+
+                </div>
+
+                <div class="forme char" style="line-height: 50px;font-size: 45px; margin-top: 15px">
+
+                        <span style="margin-right: 155px">
+                        DJREGBE
+                        </span>
+
+
+                    <span>
+                            DETAIL POISSON
+                        </span>
+                </div>
+
+
+                <div class="forme" style="margin-top: 25px">
+                    <table>
+                        <thead>
+                        <tr class="tr">
+                            <td >Articles</td>
+                            <td align="center" >Qté</td>
+                            <td >Cond</td>
+                            <td >Prix U.</td>
+                            {{-- <td width="10">Rem</td> --}}
+                            <td >Montant</td>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr class="tr">
+                            <td>HM SBS 20KG NOUV (A-EX)</td>
+                            <td align="center">1,00</td>
+                            <td>KG</td>
+                            <td>1 000</td>
+                            {{-- <td>0</td> --}}
+                            <td>1000</td>
+                        </tr>
+                        <tr class="tr">
+                            <td>HM SBS 20KG NOUV (A-EX)</td>
+                            <td align="center">1,00</td>
+                            <td>KG</td>
+                            <td>1 000</td>
+                            {{-- <td>0</td> --}}
+                            <td>1000</td>
+                        </tr>
+                        <tr class="tr">
+                            <td>HM SBS 20KG NOUV (A-EX)</td>
+                            <td align="center">1,00</td>
+                            <td>KG</td>
+                            <td>1 000</td>
+                            {{-- <td>0</td> --}}
+                            <td>1000</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+             <div style="margin-top: 40px ;" class="inline-container l ml">
+                    <span style=" font-weight: bold; font-size: 55px; margin-left: 220px;" class="text">Total HT (B): </span>
+                <span>0</span>
+                </div>
+
+
+                <div class="container" style="display: flex;">
+                    <div class="inline-containers lh">
+                        <span style=" font-size: 55px;" class="text">Remise : </span>
+                        <span style="margin-left: 180px;font-size: 55px;">0</span>
+
+                    </div>
+
+                    <div class="inline-container ml" style="line-height: 5px;  margin-top: 40px;">
+                        <span style=" font-weight: bold; font-size: 55px;; margin-left: 220px;"
+                            class="text"> TVA ( 18 %) :</span>
+                        <div class="" style="margin-left: 570px; width: 400px;">
+                            <span class="number" style="font-size:55px;">0</span></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="inline-container l ml" style="margin-left: 550px ; margin-top: 40px;">
+                    <span style=" font-weight: bold; font-size: 55px;; margin-left: 180px;"
+                        class="text">Total Exo. (A-EX) : </span>
+                <span>0</span>
+
+                </div>
+
+
+                <div class="container" style="display: flex; margin-top: 40px;">
+                    <div class="inline-containers lh">
+                        <span style=" font-size: 55px;" class="text">Espece : </span>
+                        <span style="margin-left: 180px;font-size: 55px;">1 000</span>
+
+                    </div>
+
+                    <div class="inline-container ml" style="line-height: 5px;">
+                        <span style=" font-weight: bold;  font-size: 55px; margin-left: 220px;"
+                            class="text"> AIB ( 0 %) :</span>
+                        <div class="" style="margin-left: 520px; width: 400px;">
+                            <span class="number" style="font-size: 55px;">0</span></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="container" style="display: flex;">
+                    <div class="inline-containers lh">
+                        <span style=" font-size: 55px;" class="text">Reliquat : </span>
+                        <span class="" style="font-size: 55px;;margin-left: 180px;">0</span>
+
+                    </div>
+
+                    <div class="inline-container ml " style="line-height: 5px;margin-top: 10px;">
+                        <span style=" font-weight: bold;  ffont-size: 55px;; margin-left: 220px;" class="text"> TOTAL TTC :</span>
+                        <div class="" style="margin-left: 580px; width: 400px;">
+                            <span class="number" style="font-size: 55px;; " >0</span></div>
+
+                    </div>
+
+                </div>
+
+
+                <div style="margin-top: 70px;">
+                    <div style="display: inline-block; vertical-align: top;">
+                        <div>
+                            <span style="font-size: 55px; line-height: 5px;">CODE MECeF / DGI : </span>
+
+                        </div>
+
+                    </div>
+                    <div style="display: inline-block; margin-left: 40px; font-size: 55px;">
+                        7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH
+                    </div>
+                </div>
+
+
+                <div style="margin-top: 50px; margin-bottom: 0">
+                    <div style="display: inline-block; vertical-align: top;">
+                        <div>
+                            <span style="font-size: 55px;">NIM :</span>
+                            <span style="margin-left: 180px; font-size: 55px;;">ED04000144</span>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <span style="font-size: 55px;">Compteurs :</span>
+                            <span style="margin-left: 80px; font-size: 55px;">309 833/311 237 <span style="margin-left: 10px;">FV</span></span>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <span style="font-size: 55px;">Heure :</span>
+                            <span style="margin-left: 180px; font-size: 55px;">12/12/2022 14:54:47</span>
+                        </div>
+                        <div style="display: inline-block; margin-left: 150px; margin-top: 20px;">
+                            <img
+                                src="data:image/png;base64, {!! base64_encode(QrCode::generate('7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH')) !!} "
+                                alt="Image" style="width: 250px;">
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div style="text-align: center; margin-top: 0">
+                    <p style="font-size: 50px;font-weight: bold">
+                        LES ARTICLES VENDUS NE SONT NI REPRIS NI ECHANGES
+                    </p>
+                    <p style="line-height: 1px;font-size: 50px;">
+                        Merci pour votre fidélité; à bientôt
+                    </p>
+                </div>
+
+            </td>
+        </tr>
+</table>
+
 
 
 {{--<img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(200)->generate('http://google.com')) !!} ">--}}
