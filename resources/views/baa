@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket de caisse</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .ticket-container {
+            column-count: 2;
+            column-gap: 20px;
+        }
+
+        .ticket {
+            width: 100%;
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        .ticket-header,
+        .ticket-items {
+            margin-bottom: 10px;
+        }
+
+        .ticket-items table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .ticket-items th,
+        .ticket-items td {
+            padding: 5px;
+        }
+
+        .ticket-items th {
+            background-color: #f0f0f0;
+        }
+
+        @media print {
+            .ticket-container {
+                width: 100%;
+                column-count: 1;
+                column-gap: 0;
+            }
+
+            .ticket {
+                width: 100%;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ticket-container">
+        <div class="ticket">
+            <div class="ticket-header">
+                <h2>Mon Magasin 1</h2>
+                <p>Adresse du magasin 1</p>
+            </div>
+
+            <div class="ticket-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produit 1</td>
+                            <td>10 €</td>
+                        </tr>
+                        <tr>
+                            <td>Produit 2</td>
+                            <td>15 €</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ticket-footer">
+                <p>Total : 25 €</p>
+            </div>
+        </div>
+
+        <div class="ticket">
+            <div class="ticket-header">
+                <h2>Mon Magasin 2</h2>
+                <p>Adresse du magasin 2</p>
+            </div>
+
+            <div class="ticket-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produit 3</td>
+                            <td>20 €</td>
+                        </tr>
+                        <tr>
+                            <td>Produit 4</td>
+                            <td>12 €</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ticket-footer">
+                <p>Total : 32 €</p>
+            </div>
+        </div>
+
+        <!-- Ajoutez plus de blocs .ticket dans le .ticket-container pour les pages supplémentaires -->
+
+        <!-- Exemple pour une deuxième page -->
+        <div class="ticket">
+            <div class="ticket-header">
+                <h2>Mon Magasin 3</h2>
+                <p>Adresse du magasin 3</p>
+            </div>
+
+            <div class="ticket-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produit 5</td>
+                            <td>18 €</td>
+                        </tr>
+                        <tr>
+                            <td>Produit 6</td>
+                            <td>9 €</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ticket-footer">
+                <p>Total : 27 €</p>
+            </div>
+        </div>
+
+        <!-- Exemple pour une troisième page -->
+        <div class="ticket">
+            <div class="ticket-header">
+                <h2>Mon Magasin 4</h2>
+                <p>Adresse du magasin 4</p>
+            </div>
+
+            <div class="ticket-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produit 7</td>
+                            <td>22 €</td>
+                        </tr>
+                        <tr>
+                            <td>Produit 8</td>
+                            <td>14 €</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ticket-footer">
+                <p>Total : 36 €</p>
+            </div>
+        </div>
+    </div>
+    <div class="ticket-container">
+        <div class="ticket">
+            <div class="ticket-header">
+                <h2>Mon Magasin 1</h2>
+                <p>Adresse du magasin 1</p>
+            </div>
+
+            <div class="ticket-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produit 1</td>
+                            <td>10 €</td>
+                        </tr>
+                        <tr>
+                            <td>Produit 2</td>
+                            <td>15 €</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ticket-footer">
+                <p>Total : 25 €</p>
+            </div>
+        </div>
+
+        <div class="ticket">
+            <div class="ticket-header">
+                <h2>Mon Magasin 2</h2>
+                <p>Adresse du magasin 2</p>
+            </div>
+
+            <div class="ticket-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produit 3</td>
+                            <td>20 €</td>
+                        </tr>
+                        <tr>
+                            <td>Produit 4</td>
+                            <td>12 €</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ticket-footer">
+                <p>Total : 32 €</p>
+            </div>
+        </div>
+
+        <!-- Ajoutez plus de blocs .ticket dans le .ticket-container pour les pages supplémentaires -->
+
+        <!-- Exemple pour une deuxième page -->
+        <div class="ticket">
+            <div class="ticket-header">
+                <h2>Mon Magasin 3</h2>
+                <p>Adresse du magasin 3</p>
+            </div>
+
+            <div class="ticket-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produit 5</td>
+                            <td>18 €</td>
+                        </tr>
+                        <tr>
+                            <td>Produit 6</td>
+                            <td>9 €</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ticket-footer">
+                <p>Total : 27 €</p>
+            </div>
+        </div>
+
+        <!-- Exemple pour une troisième page -->
+        <div class="ticket">
+            <div class="ticket-header">
+                <h2>Mon Magasin 4</h2>
+                <p>Adresse du magasin 4</p>
+            </div>
+
+            <div class="ticket-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produit 7</td>
+                            <td>22 €</td>
+                        </tr>
+                        <tr>
+                            <td>Produit 8</td>
+                            <td>14 €</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ticket-footer">
+                <p>Total : 36 €</p>
+            </div>
+        </div>
+    </div>
+    <div class="ticket-container">
+        <div class="ticket">
+            <div class="ticket-header">
+                <h2>Mon Magasin 1</h2>
+                <p>Adresse du magasin 1</p>
+            </div>
+
+            <div class="ticket-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produit 1</td>
+                            <td>10 €</td>
+                        </tr>
+                        <tr>
+                            <td>Produit 2</td>
+                            <td>15 €</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ticket-footer">
+                <p>Total : 25 €</p>
+            </div>
+        </div>
+
+        <div class="ticket">
+            <div class="ticket-header">
+                <h2>Mon Magasin 2</h2>
+                <p>Adresse du magasin 2</p>
+            </div>
+
+            <div class="ticket-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produit 3</td>
+                            <td>20 €</td>
+                        </tr>
+                        <tr>
+                            <td>Produit 4</td>
+                            <td>12 €</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ticket-footer">
+                <p>Total : 32 €</p>
+            </div>
+        </div>
+
+        <!-- Ajoutez plus de blocs .ticket dans le .ticket-container pour les pages supplémentaires -->
+
+        <!-- Exemple pour une deuxième page -->
+        <div class="ticket">
+            <div class="ticket-header">
+                <h2>Mon Magasin 3</h2>
+                <p>Adresse du magasin 3</p>
+            </div>
+
+            <div class="ticket-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produit 5</td>
+                            <td>18 €</td>
+                        </tr>
+                        <tr>
+                            <td>Produit 6</td>
+                            <td>9 €</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ticket-footer">
+                <p>Total : 27 €</p>
+            </div>
+        </div>
+
+        <!-- Exemple pour une troisième page -->
+        <div class="ticket">
+            <div class="ticket-header">
+                <h2>Mon Magasin 4</h2>
+                <p>Adresse du magasin 4</p>
+            </div>
+
+            <div class="ticket-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Produit 7</td>
+                            <td>22 €</td>
+                        </tr>
+                        <tr>
+                            <td>Produit 8</td>
+                            <td>14 €</td>
+                        </tr>
+                        <!-- Ajoutez plus de lignes ici -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ticket-footer">
+                <p>Total : 36 €</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
