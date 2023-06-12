@@ -79,4 +79,31 @@ class PDFController extends Controller
         //  return $pdf->download('codesolutionstuff.pdf');
     }
 
+    public function statistiqueCaissePDF()
+    {
+
+        $data = [];
+
+        $pdf = PDF::loadView('statCaisse', $data);
+
+        $paperSize = array(0, 0, 793.7007874, 1122.519685); // Largeur: 500px, Hauteur: 800px
+        //$paperSize = array(0, 0, 291.02362205, 1122.519685); // Largeur: 500px, Hauteur: 800px
+        // $pdf->setPaper($paperSize);
+        // $pdf->setPaper('200mm', '100mm');
+        $pdf->getDomPDF()->set_option('dpi', 300);
+//        $pdf->getDomPDF()->set_option('defaultFont', 'Arial');
+
+        // $pdf->setPaper( 'landscape');
+
+        $pdf->setPaper('A4', 'landscape');
+
+      //  return $pdf->stream('ticketcaisse.pdf');
+
+
+        return $pdf->stream('codesolutionstuff.pdf');
+        //  return $pdf->download('codesolutionstuff.pdf');
+    }
+
+
+
 }
