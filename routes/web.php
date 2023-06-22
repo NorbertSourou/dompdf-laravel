@@ -22,3 +22,5 @@ Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
 Route::get('generate-recuA4', [PDFController::class, 'generateRecuA4']);
 
 Route::get('statistiqueCaisse-pdf', [PDFController::class, 'statistiqueCaissePDF']);
+
+Route::get('statistiquefamille-pdf', [PDFController::class, 'statistiquefamille']);
