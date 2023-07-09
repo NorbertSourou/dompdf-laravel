@@ -35,7 +35,7 @@ class PDFController extends Controller
 
         $data = [];
 
-        $pdf = PDF::loadView('pdf', $data);
+        $pdf = PDF::loadView('recuB5', $data);
 
         $paperSize = array(0, 0, 793.7007874, 1122.519685); // Largeur: 500px, Hauteur: 800px
         //$paperSize = array(0, 0, 291.02362205, 1122.519685); // Largeur: 500px, Hauteur: 800px

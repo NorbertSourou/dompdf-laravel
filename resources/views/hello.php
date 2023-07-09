@@ -148,6 +148,7 @@
         table {
             border-collapse: collapse;
             width: 100%;
+
         }
 
         .tr td {
@@ -202,212 +203,31 @@
                             </div>
 
                         </header>
-                        <div class="ticket-items">
-                            <div class="forme char" style="margin-top: 30px;">
-
-                                <span style="margin-left: 950px; line-height: 45px;">Facture N° : 24 474</span>
-
-                            </div>
+                        <div class="ticket-items" style="display: flex; ">
 
                             <div class="forme char">
 
-                                <span>Client : </span> <span>CLIENT COMPTOIR </span>
-                                <span style="margin-left: 20px;">Ifu </span>
+                                <span>Client : </span> <span style="margin-left: 20px;"> COMPTOIR </span>
+
 
                             </div>
 
 
-                            <div class="forme char" style="margin-top: 15px;">
-
-                                <span>
-                                    Réf. :
-                                </span>
-
-                                <span style="margin-left: 180px;">
-
-
-                                    <span>Date : </span> <span> 12/12/2022</span> <span
-                                        style="margin-left: 10px;">à</span style="margin-left: 10px;">
-                                    <span>14:54:00</span>
-                                </span>
-                            </div>
-
-                        </div>
-
-                        <div class="forme char">
-
-                            <span>
-                                CAISSE1SUP
-                            </span>
-
-                            <span style="margin-left: 25px;">
-
-
-                                <span>Caissier 1 </span> <span> ADJARA</span> <span style="margin-left: 50px;">
-                                    Magasin :</span style="margin-left: 15px;"> <span>DETAIL POISSON</span>
-                            </span>
-                        </div>
-                        <div class="forme" style="margin-top: 70px;">
-                            <table>
-                                <thead>
-                                    <tr class="tr">
-                                        <td>Articles</td>
-                                        <td>Qté</td>
-                                        <td>Cond</td>
-                                        <td>Prix U.</td>
-                                        <td>Rem</td>
-                                        <td>Montant</td>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr class="tr">
-                                        <td>Articles</td>
-                                        <td>Qté</td>
-                                        <td>Cond</td>
-                                        <td>Prix U.</td>
-                                        <td>Rem</td>
-                                        <td>Montant</td>
-                                    </tr>
-
-                                </tbody>
+                            <table >
+                                <tr>
+                                    <td>
+                                        <tr>
+                                            N
+                                        </tr>
+                                    </td>
+                                </tr>
                             </table>
 
+
+
                         </div>
 
-                        <div class="forme char" style="margin-top: 100px;">
 
-                            <span>
-                                Arrêtée la présente facture à la somme de :
-                            </span>
-
-                            <span style="margin-left: 25px;">
-
-
-                                <span>Total HT (B): </span> <span style="margin-left: 80px;"> 10000 </span>
-                            </span>
-                        </div>
-
-                        <div class="forme char" style="margin-top: 10px;">
-
-                            <span>
-                                MILLE
-                            </span>
-
-                            <span style="margin-left: 235px;">
-
-
-                                <span>TVA ( 18 %) : </span> <span style="margin-left: 80px;"> 10000 </span>
-                            </span>
-                        </div>
-
-                        <table style="font-size: 40px; line-height: 100px;">
-                            <tr>
-                                <td>
-
-                                    <div style="margin-top: 30px;" style="font-size: 30px;">
-                                        <div style="display: inline-block; vertical-align: top;">
-                                            <div>
-                                                <span style=" ">CODE MECeF / DGI :
-                                                </span>
-
-                                            </div>
-
-                                        </div>
-                                        <div style="display: inline-block; margin-left: 10px; ">
-                                            7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH
-                                        </div>
-                                    </div>
-
-
-                                    <div style=" margin-bottom: 0">
-                                        <div style="display: inline-block; vertical-align: top;">
-                                            <div>
-                                                <span style="">NIM :</span>
-                                                <span style="margin-left: 180px; ">ED04000144</span>
-                                            </div>
-                                            <div style="margin-top: 10px;">
-                                                <span style="">Compteurs :</span>
-                                                <span style="margin-left: 80px; ">309 833/311 237 <span
-                                                        style="margin-left: 10px;">FV</span></span>
-                                            </div>
-                                            <div style="margin-top: 10px;">
-                                                <span style="">Heure :</span>
-                                                <span style="margin-left: 180px; ">12/12/2022
-                                                    14:54:47</span>
-                                            </div>
-                                            <div style="display: inline-block; margin-left: 150px; margin-top: 20px;">
-                                                <img src="data:image/png;base64, {!! base64_encode(QrCode::generate('7NX5-G4AK-R6V2-5V7X-HGJ6-HTQH')) !!} "
-                                                    alt="Image" style="width: 100px;">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="forme " style="font-size: 30px;">
-                                        LES ARTICLES VENDUS NE SONT NI REPRIS NI ECHANGES
-
-
-                                    </div>
-                                </td>
-                                <td>
-
-
-                                    <div class="forme " style=" margin-right: 20px;" style="font-size: 30px;">
-
-
-
-                                        <span style="">
-
-
-                                            <span>Total Exo. (A-EX) :</span> <span style=""> 10000 </span>
-                                        </span>
-                                    </div>
-
-                                    <div class="inline-container l ml" style="">
-                                        <span style=" font-weight: bold; margin-left: 10px;" class="text">AIB ( 0 %)
-                                            :
-                                        </span>
-                                        <span>100000</span>
-
-                                    </div>
-
-                                    <div class="inline-container l ml" style="">
-                                        <span style=" font-weight: bold; margin-left: 10px;" class="text">TOTAL TTC
-                                            :</span>
-                                        <span>0</span>
-
-                                    </div>
-
-                                    <div class="inline-container l ml" style="">
-                                        <span style=" font-weight: bold; margin-left: 10px;" class="text">Remise
-                                            :</span>
-                                        <span>0</span>
-
-                                    </div>
-
-                                    <div class="inline-container l ml" style="">
-                                        <span style=" font-weight: bold; margin-left: 10px;" class="text">Espece :
-                                            <span>0</span></span>
-
-                                        <span style=" font-weight: bold; margin-left: 10px;" class="text">Reliquat :
-                                            <span>0</span></span>
-
-
-                                    </div>
-
-                                    <div class="inline-container l ml" style="font-size: 30px;">
-                                        Merci pour votre fidélité; à bientôt
-
-
-                                    </div>
-
-
-
-
-
-                                </td>
-                            </tr>
-                        </table>
 
 
 
